@@ -1,0 +1,192 @@
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    .features {
+        flex-direction: column;
+    }
+    .features li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    .features h3 {
+        font-size: 1.2em;
+    }
+}
+
+/*Besic leyout in Meta Ai*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="assistant-container">
+        <header>
+            <h1>Virtual Assistant</h1>
+            <button class="mic-btn">Mic</button>
+        </header>
+        <div class="chat-container">
+            <div class="chat-box">
+                <div class="user-message">Hello!</div>
+                <div class="assistant-message">Hi! How can I help you?</div>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Type your message...">
+                <button class="send-btn">Send</button>
+            </div>
+        </div>
+        <footer>
+            <ul>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Help</a></li>
+                
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
+
+/*CSS*/
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.assistant-container {
+    width: 400px;
+    margin: 40px auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.mic-btn {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.chat-container {
+    padding: 2em;
+}
+
+.chat-box {
+    padding: 1em;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-message {
+    background-color: #f0f0f0;
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.assistant-message {
+    background-color: #e0e0e0;
+    padding: 1em;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.input-box {
+    padding: 1em;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.send-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    clear: both;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  main {
+      flex-direction: column;
+  }
+  .features {
+      flex-direction: column;
+  }
+  .features li {
+      margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+      font-size: 1.5em;
+  }
+  .features h3 {
+      font-size: 1.2em;
+  }
+}
+
+

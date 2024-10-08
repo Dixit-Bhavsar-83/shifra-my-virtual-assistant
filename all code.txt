@@ -1,0 +1,332 @@
+/* HTML */
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chitti,My Virtual Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Website logo-->
+    <link rel="shortcut icon" href="robot-2.png" type="image/x-icon" />
+  </head>
+  <body>
+    <img src="robot-2.png" alt="chitti robot" id="logo" />
+    <h1>
+      I'm <span id="name">chitti</span>,Your
+      <span id="va">Virtual Assistant</span>
+    </h1>
+    <img
+      src="image_processing20191125-5333-1oj7903 (1).gif"
+      alt="voice"
+      id="voice"
+    />
+
+    <button id="btn">
+      <img src="mic.svg" alt="mic" /><span id="content"
+        ><b>Click here for talk to me</b></span
+      >
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+/* CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+
+}
+#logo{
+    width: 20vw;
+}
+h1{
+    color: white;
+    /*This font family*/
+    font-family: "Playwrite CU", cursive;
+  /*  font-family: "Lilita One", sans-serif;*/
+
+
+}
+/* color chang font chitti*/
+#name {
+    color: rgb(212, 43, 122);
+    font-size: 45px;
+}
+#va {
+    color: rgb(43, 206, 122);
+    font-size: 45px;
+}
+/* gif width*/
+#voice{
+    width: 320px;
+    display: none;
+
+}
+/* button style*/
+#btn {
+    width: 30%;
+    background: linear-gradient(to right,rgb(255, 2, 120),rgb(0, 255, 123));
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+   border-radius: 20px;
+   color: white;
+   box-shadow: 2px 2px 10px rgb(43, 206, 122),2px 2px 10px rgb(255, 2, 120);
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+/* button haver*/
+#btn:hover{
+    box-shadow: 2px 2px 20px rgb(43, 206, 122),2px 2px 20px rgb(255, 2, 120);
+    letter-spacing: 2px;
+}
+
+
+
+/* User Speaking Ouput */
+
+
+let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recognition = new SpeechRecognition();
+
+recognition.onresult = (event) => {
+    let currentIndex = event.resultIndex;
+    if (event.results[currentIndex] && event.results[currentIndex][0]) {
+        let transcript = event.results[currentIndex][0].transcript;
+     /*BUTTON text*/   content.innerText=transcript
+     takeCommand(transcript.toLowerCase())
+        
+    } else {
+        console.error("Error: event.results[currentIndex] is undefined or does not have a [0] element.");
+    }
+} 
+
+
+
+
+
+
+
+
+/* stat */
+
+
+
+/* User Speaking Ouput */
+
+
+let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recognition = new SpeechRecognition();
+
+recognition.onresult = (event) => {
+    let currentIndex = event.resultIndex;
+    if (event.results[currentIndex] && event.results[currentIndex][0]) {
+        let transcript = event.results[currentIndex][0].transcript;
+     /*BUTTON text*/   content.innerText=transcript
+     takeCommand(transcript.toLowerCase())
+        
+    } else {
+        console.error("Error: event.results[currentIndex] is undefined or does not have a [0] element.");
+    }
+}
+
+
+btn.addEventListener("click",()=>{
+
+    recognition.start()
+})
+ /* teak command 
+
+ function takeCommand(message){
+    if(message.includes("hello")){ 
+        speak("hello sir,what can i help you")
+    }
+ }*/
+
+    function takeCommand(message) {
+       /* console.log("Received message:", message); // Debugging*/
+       /* your commands */
+        if (message.includes("hello")||message.includes("hello")) {
+            
+            speak("hello sir, what can I help you with?")
+        }
+
+        else if(message.includes("who are you")||message.includes("hu r u")) {
+
+            speak("I am virtual assistant ,created by Dixit Sir")
+        }
+        else if(message.includes("what is your name")) {
+
+            speak("My name is Shifra")
+        }
+        else if(message.includes("who made you")) {
+
+            speak("me creat a Dixit Sir and 2 october 2024")
+        }/*Open apps website code*/else if(message.includes("open youtube")){
+            speak("opening Youtube")
+            window.open("https://www.Youtube.com/","_blank")
+        }
+        
+    }*/
+    
+    
+
+     
+
+    
+
+
+
+/* for copy */2:00pm*/
+
+
+/* window speeking a goood morning */
+
+window.addEventListener('load',()=>{
+    wishme()
+})
+
+
+/* User Speaking Ouput */
+
+
+let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recognition = new SpeechRecognition();
+
+recognition.onresult = (event) => {
+    let currentIndex = event.resultIndex;
+    if (event.results[currentIndex] && event.results[currentIndex][0]) {
+        let transcript = event.results[currentIndex][0].transcript;
+     /*BUTTON text*/   content.innerText=transcript
+     takeCommand(transcript.toLowerCase());
+        
+    } else {
+        console.error("Error: event.results[currentIndex] is undefined or does not have a [0] element.");
+    }
+}
+
+
+btn.addEventListener("click",()=>{
+
+    recognition.start()
+})
+ /* teak command 
+
+ function takeCommand(message){
+    if(message.includes("hello")){ 
+        speak("hello sir,what can i help you")
+    }
+ }*/
+
+    function takeCommand(message) {
+       /* console.log("Received message:", message); // Debugging*/
+       /* your commands */
+        if (message.includes("hello")||message.includes("hello")) {
+            
+            speak("hello sir, what can I help you with?")
+        }
+
+        else if(message.includes("who are you")||message.includes("hu r u")) {
+
+            speak("I am virtual assistant ,created by Dixit Sir")
+        }
+        else if(message.includes("what is your name")) {
+
+            speak("My name is Shifra")
+        }
+
+        else if(message.includes("who made you")) {
+
+            speak("me creat a Dixit Sir and 2 october 2024")
+        }
+        else if(message.includes("what is Dixit Bhavsar")) {
+
+            speak("Dixit Bhavsar is a passionate coder based in Ahmedabad. He has expertise in various programming languages, including HTML, CSS, JavaScript, C, C++, and Python. Currently a Standard 11 Commerce student, Dixit has a keen interest in technology and coding. ")
+
+        }
+        else if(message.includes("open youtube")){
+            speak("opening youtube")
+            window.open("https://www.youtube.com/","_blank")
+        }
+        
+    }
+
+
+
+
+
+
+/* whasapp ofer*/
+
+let btn=document.querySelector("#btn")
+let content=document.querySelector("#content")
+/*  Robot Speaking function */
+
+function speak(text){
+    let text_speak=new SpeechSynthesisUtterance(text)
+    text_speak.rate=1
+    text_speak.pitch=1
+    text_speak.volume=1
+    text_speak.lang="hi=GB"
+    window.speechSynthesis.speak(text_speak)
+}
+/* Good Morning Function */
+
+function wishMe(){
+    let day=new Date()
+    let hours=day.getHours()
+    /* if me candition*/
+    if(hours>=0 && hours<12){
+        speak("Good Morning Sir")
+    }
+    else if(hours>=12 && hours <16){
+        speak("Good Afternoon Sir")
+    }else{
+        speak("Good Evening Sir")
+    }
+}
+///window.addEventListener('load',()=>{
+  //      wishMe()
+//})
+
+/* speech output */
+
+let speechRecognition= window.SpeechRecognition || window.webkitSpeechRecognition
+let recognition =new speechRecognition()
+recognition.onresult=(event)=>{
+  let currentIndex=event.resultIndex
+  let transcript=event.results[currentIndex][0].transcript
+    content.innerText=transcript
+    takeCommand(transcript.LowerCase())
+}
+
+btn.addEventListener("click",()=>{
+recognition.start()
+
+})
+
+/* Take command*/
+
+function takeCommand(message){
+    if(message.includes("hello")||message.includes("hey shifra")){
+        speak("hello sir,what can i help you?")
+    }
+}
